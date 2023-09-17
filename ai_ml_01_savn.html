@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Product Development - Deru Tsai</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Deru Tsai</strong> <span>Portfolio</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html" class="button fit">Home</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="robotics_projects.html">Robotics Projects</a></li>
+							<li><a href="ai_ml_projects.html">AI and Machine Learning</a></li>
+							<li><a href="research_project.html">Research Project</a></li>
+							<li><a href="product_development.html">Product Development</a></li>
+							<li><a href="graphic_design.html">Graphic Design</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h4>Perception in Robotics Project</h4>
+										<h1>Object Navigation in AI2-THOR by SAVN</h1>
+									</header>
+									<div class="row">
+										<span class="image main">
+											<img src="images/ai_ml_projects/1_savn_01.jpg" alt="" />
+											<p>Project Goal: Train the agent to find objects, and then navigate the agent in known or unknown environments to search known or unknown objects.</p>
+										</span>
+									</div>
+									
+									<h3>Abstract</h3>
+									<p>In this project, we demonstrate that the self-adaptive
+										visual navigation (SAVN) model makes the agent conduct visual
+										navigation successfully even when searching for unknown objects
+										in unknown environments. Based on the meta-reinforcement
+										learning architecture, such a model builds up the network to
+										learn how to tune the weightings by itself. The result shows that
+										SAVN outperforms the random-walking method both in success
+										rate (SR) and success weighted by inverse path length (SPL).
+										Index Terms—Visual Navigation, Meta Learning
+									</p>
+									
+									<h3>Introduction</h3>
+									
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<span class="image fit">
+												<img src="images/ai_ml_projects/1_savn_02.jpg" alt="" />
+												<p>Fig. 1. Comparison between traditional method and SAVN</p>
+											</span>
+										</div>
+										<div class="col-6 col-12-small">
+											<p>Our project goal is to ask an agent to navigate in both
+												known and unknown environments to search for both known
+												and unknown objects. Here, the term ”known” means our
+												agent has been trained with that dataset before. We have to
+												apply the provided information: object positions, reachable
+												positions, and images of states to accomplish the task in the
+												Ai2THOR simulator. Notice that apart from the above data,
+												the coordinator also provides depth information, ResNet-50
+												features, ResNet-50 classification score and segmentation that
+												we don't use in our approach, because we want to maintain
+												the original architecture of the algorithm mentioned below.
+											</p>
+										</div>
+									</div>
+
+									<p>
+										We have to consider the following question before deciding
+										our research direction. How do we learn new tasks in our
+										daily life? Based on the experience, we adapt ourselves to an
+										unknown environment by interacting with our surroundings to
+										gain information and evaluate the condition. Actually, it is a
+										series of observations and reactions. This fact contrasts with
+										most current learning strategies whose networks are frozen
+										already after training. Traditional methods deal with such a
+										problem by feeding information as much as possible. However,
+										the limitation of computation ability prevent models from
+										learning all kinds of datasets. You can expect a child to
+										recognize an ostrich as a bird, but the model who has never
+										seen it before may classify an ostrich into mammals.
+									</p>
+									<p>
+										In visual navigation, adaptation is possible without access to
+										a reward function or positive example. As the agent trains, it
+										learns self-supervised losses that facilitate effective navigation.
+										During learning, we encourage the gradient obtained from the
+										self-supervised loss to be similar to the gradient obtained from
+										the supervised navigation loss. Thus, the agents can adapt
+										during inference when explicit supervision is not available.
+									</p>
+									<p>
+										What if we create a model which can adapt itself to
+										unfamiliar environments? Instead of training a solid model
+										which learns how to navigate directly without flexibility, a
+										proper way may be to train a model which knows how
+										to tune the weightings of the above one. In this project,
+										we solve the problem by applying the self-adaptive visual
+										navigation (SAVN) model based on meta-reinforcement
+										learning. Simply speaking, agents learn how to modify their
+										network while conducting navigation during the training. They
+										detect features through observation and generate a sequence
+										of states leading to targets. To demonstrate SAVN has better
+										performance, we compare our result with the random-walking
+										method in success rate (SR) and success weighted by inverse
+										path length (SPL) and show the comparison by animations in the end.
+									</p>
+
+									<span class="image main"><img src="images/ai_ml_projects/1_savn_03.jpg" alt="" />
+										<p>Fig 2. Model Architecture</p> 
+									</span>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a href="mailto:dtsai1@asu.edu">dtsai1@asu.edu</a>
+								</div>
+							</div>
+							<div class="col-6 col-12-small">
+								<div class="contact-method">
+									<span class="icon brands alt fa-linkedin-in"></span>
+									<h3>LinkedIn</h3>
+									<a href="https://www.linkedin.com/in/deru-tsai/">https://www.linkedin.com/in/deru-tsai/</a>
+								</div>
+							</div>
+						</div>
+
+						<!--
+						<ul class="icons">
+							<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						-->
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
